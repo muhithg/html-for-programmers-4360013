@@ -46,6 +46,38 @@
       }
     ];
 
+    const wrapper = document.querySelector('.wrapper');
+    socials.forEach(card => {
+      let cardWrapper = document.createElement('div');
+      cardWrapper.style = 'border: 1px solid black';
+
+      let avatar = document.createElement('img');
+      avatar.src = card.avatar;
+      avatar.alt = card.name;
+      cardWrapper.appendChild(avatar);
+
+      let cardName= document.createElement('h3');
+      cardName.innerText=card.name;
+      cardWrapper.appendChild(cardName);
+
+      let location=document.createComment('p');
+      location.innerText=card.country;
+
+      let city=document.createElement('a');
+      city.src='#';
+      city.appendChild(document.createTextNode(`${card.city}, `));
+
+       location.(city);
+       //cardWrapper.appendChild(location);
+
+      // let addButton = document.createElement('button');
+      // addButton.innerText = 'Add Friend';
+      // cardWrapper.append(addButton);
+
+
+      
+      wrapper.appendChild(cardWrapper);
+    })
   </script>
 </body>
 
